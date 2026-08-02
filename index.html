@@ -11,7 +11,7 @@
     <meta property="og:description" content="Practical business and legal support for individuals and businesses across a range of commercial and personal matters.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
-    <meta property="og:url" content="https://www.shaaviklegal.com/">
+    <meta property="og:url" content="https://www.shaaviklegal.co.uk/">
     <link rel="canonical" href="https://www.shaaviklegal.co.uk/">
     <meta property="og:image" content="assets/logo-full.png">
 
@@ -22,7 +22,7 @@
 
     <link rel="icon" type="image/png" href="assets/logo-full.png">
 
-    <!-- Fonts: Playfair Display (serif headings) + Manrope (sans-serif body) -->
+    <!-- Fonts: Playfair Display (serif headings) + Inter (sans-serif body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,41 +32,30 @@
            Design Tokens
            ========================= */
         :root {
-            --navy-900: #06152D;            /* page background */
-            --navy-800: #0A1D3D;            /* section / card surfaces */
-            --navy-700: #0F2447;            /* elevated cards */
-            --navy-600: #15305B;            /* borders, dividers (subtle) */
-            --gold: #D4A64A;                /* primary accent */
-            --gold-soft: #E6BE6A;           /* hover */
+            --navy-900: #06152D;
+            --navy-800: #0A1D3D;
+            --navy-700: #0F2447;
+            --navy-600: #15305B;
+            --gold: #D4A64A;
+            --gold-soft: #E6BE6A;
             --gold-dim: rgba(212, 166, 74, 0.35);
             --gold-line: rgba(212, 166, 74, 0.22);
-
-            --text: #F2EEE6;                /* off-white */
-            --text-muted: #B9BFCC;          /* secondary text */
-            --text-dim: #8A92A3;            /* tertiary */
-
+            --text: #F2EEE6;
+            --text-muted: #B9BFCC;
+            --text-dim: #8A92A3;
             --font-display: 'Playfair Display', 'Georgia', serif;
             --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-
             --container: 1200px;
             --radius: 12px;
             --radius-sm: 8px;
-
             --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
             --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.25);
-
             --ease: cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* =========================
-           Base / Reset
-           ========================= */
-        *,
-        *::before,
-        *::after { box-sizing: border-box; }
-
+        /* Base / Reset */
+        *, *::before, *::after { box-sizing: border-box; }
         html { scroll-behavior: smooth; scroll-padding-top: 88px; }
-
         body {
             margin: 0;
             background: var(--navy-900);
@@ -79,11 +68,9 @@
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
         }
-
         img { max-width: 100%; display: block; }
         a { color: inherit; text-decoration: none; }
         button { font-family: inherit; cursor: pointer; }
-
         h1, h2, h3, h4 {
             font-family: var(--font-display);
             font-weight: 600;
@@ -91,19 +78,15 @@
             margin: 0;
             letter-spacing: -0.01em;
         }
-
         p { margin: 0; }
-
         .container {
             width: 100%;
             max-width: var(--container);
             margin: 0 auto;
             padding: 0 24px;
         }
-
         section { padding: 110px 0; position: relative; }
 
-        /* Subtle gold divider used between sections */
         .divider {
             width: 60px;
             height: 1px;
@@ -111,7 +94,6 @@
             margin: 0 auto 24px;
             opacity: 0.7;
         }
-
         .eyebrow {
             font-family: var(--font-body);
             font-size: 12px;
@@ -123,14 +105,12 @@
             display: block;
             text-align: center;
         }
-
         .section-title {
             font-size: clamp(28px, 3.4vw, 40px);
             text-align: center;
             margin-bottom: 16px;
             color: var(--text);
         }
-
         .section-subtitle {
             text-align: center;
             color: var(--text-muted);
@@ -139,9 +119,7 @@
             font-size: 16px;
         }
 
-        /* =========================
-           Buttons
-           ========================= */
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -158,38 +136,31 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .btn-primary {
             background: var(--gold);
             color: var(--navy-900);
         }
-
         .btn-primary:hover {
             background: var(--gold-soft);
             transform: translateY(-1px);
             box-shadow: 0 6px 18px rgba(212, 166, 74, 0.28);
         }
-
         .btn-outline {
             background: transparent;
             color: var(--text);
             border-color: var(--gold-line);
         }
-
         .btn-outline:hover {
             border-color: var(--gold);
             color: var(--gold);
         }
-
         .btn-icon {
             width: 16px;
             height: 16px;
             flex-shrink: 0;
         }
 
-        /* =========================
-           Navigation
-           ========================= */
+        /* Navigation */
         .nav {
             position: fixed;
             top: 0;
@@ -202,34 +173,24 @@
             border-bottom: 1px solid transparent;
             transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
         }
-
         .nav.scrolled {
             border-bottom-color: var(--gold-line);
             background: rgba(6, 21, 45, 0.96);
         }
-
         .nav-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 78px;
         }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
+        .brand { display: flex; align-items: center; gap: 14px; }
         .brand-logo {
             height: 115px;
             width: auto;
             display: block;
             transition: opacity 0.2s var(--ease);
         }
-
         .brand:hover .brand-logo { opacity: 0.85; }
-
         .brand-logo-footer { height: 96px; }
 
         .nav-links {
@@ -240,7 +201,6 @@
             padding: 0;
             align-items: center;
         }
-
         .nav-links a {
             font-size: 14px;
             font-weight: 600;
@@ -249,10 +209,8 @@
             position: relative;
             padding: 6px 0;
         }
-
         .nav-links a:hover,
         .nav-links a.active { color: var(--gold); }
-
         .nav-links a.active::after {
             content: '';
             position: absolute;
@@ -263,10 +221,6 @@
             background: var(--gold);
         }
 
-        .nav-cta { margin-left: 16px; }
-
-        .nav-cta .btn { padding: 12px 22px; font-size: 12px; }
-
         .hamburger {
             display: none;
             background: none;
@@ -274,7 +228,6 @@
             padding: 8px;
             color: var(--gold);
         }
-
         .hamburger svg { width: 26px; height: 26px; }
 
         /* Mobile menu */
@@ -290,9 +243,7 @@
             transition: transform 0.35s var(--ease);
             z-index: 99;
         }
-
         .mobile-menu.open { transform: translateY(0); }
-
         .mobile-menu ul {
             list-style: none;
             margin: 0;
@@ -301,7 +252,6 @@
             flex-direction: column;
             gap: 4px;
         }
-
         .mobile-menu a {
             display: block;
             padding: 14px 0;
@@ -310,23 +260,14 @@
             font-weight: 600;
             border-bottom: 1px solid var(--navy-600);
         }
-
         .mobile-menu a:last-child { border-bottom: none; }
 
-        .mobile-menu .btn {
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        /* =========================
-           Hero
-           ========================= */
+        /* Hero */
         .hero {
             padding: 180px 0 110px;
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -336,7 +277,6 @@
                 radial-gradient(ellipse at 20% 80%, rgba(20, 50, 100, 0.25), transparent 60%);
             pointer-events: none;
         }
-
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1.05fr;
@@ -344,13 +284,11 @@
             align-items: center;
             position: relative;
         }
-
         .hero-headline {
             font-size: clamp(38px, 5vw, 60px);
             line-height: 1.08;
             margin-bottom: 22px;
         }
-
         .hero-headline .accent {
             color: var(--gold);
             display: block;
@@ -358,7 +296,6 @@
             font-weight: 500;
             font-size: 0.5em;
         }
-
         .hero-sub {
             font-size: 17px;
             color: var(--text-muted);
@@ -366,7 +303,6 @@
             margin-bottom: 32px;
             max-width: 520px;
         }
-
         .hero-highlights {
             list-style: none;
             padding: 0;
@@ -377,7 +313,6 @@
             grid-auto-rows: minmax(40px, auto);
             align-items: start;
         }
-
         .hero-highlights li {
             display: flex;
             align-items: center;
@@ -386,20 +321,17 @@
             color: var(--text);
             font-weight: 500;
         }
-
         .check {
             width: 18px;
             height: 18px;
             flex-shrink: 0;
             color: var(--gold);
         }
-
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
         }
-
         .hero-visual {
             position: relative;
             border-radius: var(--radius);
@@ -411,14 +343,12 @@
                 0 0 60px rgba(212, 166, 74, 0.08);
             border: 1px solid var(--gold-line);
         }
-
         .hero-visual img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
         }
-
         .hero-visual::after {
             content: '';
             position: absolute;
@@ -429,20 +359,14 @@
             pointer-events: none;
         }
 
-
-
-        /* =========================
-           About
-           ========================= */
+        /* About */
         .about { background: var(--navy-800); }
-
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.15fr;
             gap: 70px;
             align-items: center;
         }
-
         .about-image {
             position: relative;
             border-radius: var(--radius);
@@ -454,14 +378,12 @@
                 0 0 0 1px var(--gold-line),
                 0 0 60px rgba(212, 166, 74, 0.06);
         }
-
         .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
         }
-
         .about-image::before {
             content: '';
             position: absolute;
@@ -471,7 +393,6 @@
             pointer-events: none;
             z-index: 1;
         }
-
         .about-image::after {
             content: '';
             position: absolute;
@@ -479,21 +400,17 @@
             background: linear-gradient(180deg, transparent 60%, rgba(6, 21, 45, 0.25));
             pointer-events: none;
         }
-
         .about-content .eyebrow { text-align: left; }
-
         .about-content h2 {
             font-size: clamp(28px, 3.4vw, 38px);
             text-align: left;
             margin-bottom: 22px;
         }
-
         .about-content p {
             color: var(--text-muted);
             margin-bottom: 18px;
             font-size: 16px;
         }
-
         .approach {
             margin-top: 36px;
             background: var(--navy-700);
@@ -501,7 +418,6 @@
             border-radius: var(--radius);
             padding: 28px;
         }
-
         .approach-title {
             font-family: var(--font-body);
             font-size: 11px;
@@ -512,18 +428,12 @@
             margin-bottom: 22px;
             text-align: center;
         }
-
         .approach-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 18px;
         }
-
-        .approach-item {
-            text-align: center;
-            padding: 6px;
-        }
-
+        .approach-item { text-align: center; padding: 6px; }
         .approach-icon {
             width: 44px;
             height: 44px;
@@ -536,9 +446,7 @@
             justify-content: center;
             color: var(--gold);
         }
-
         .approach-icon svg { width: 20px; height: 20px; }
-
         .approach-label {
             font-size: 12px;
             font-weight: 500;
@@ -546,13 +454,8 @@
             line-height: 1.35;
         }
 
-        /* =========================
-           Services
-           ========================= */
-        .services-block {
-            margin-top: 24px;
-        }
-
+        /* Services */
+        .services-block { margin-top: 24px; }
         .services-label {
             text-align: center;
             font-family: var(--font-body);
@@ -565,7 +468,6 @@
             position: relative;
             display: block;
         }
-
         .services-label::before,
         .services-label::after {
             content: '';
@@ -576,26 +478,21 @@
             vertical-align: middle;
             margin: 0 20px;
         }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
-
-        /* Desktop (3-col): centre orphan card in middle column */
         @media (min-width: 1025px) {
             .services-grid > .service-card:last-child:nth-child(3n+1) {
                 grid-column: 2;
             }
         }
-
         .services-grid.individuals {
             grid-template-columns: repeat(2, 1fr);
             max-width: 800px;
             margin: 0 auto;
         }
-
         .service-card {
             background: var(--navy-800);
             border: 1px solid var(--gold-line);
@@ -605,13 +502,11 @@
             transition: all 0.3s var(--ease);
             position: relative;
         }
-
         .service-card:hover {
             transform: translateY(-4px);
             border-color: var(--gold);
             box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
         }
-
         .service-icon {
             width: 64px;
             height: 64px;
@@ -625,14 +520,11 @@
             color: var(--gold);
             transition: all 0.3s var(--ease);
         }
-
         .service-card:hover .service-icon {
             background: rgba(212, 166, 74, 0.15);
             transform: scale(1.05);
         }
-
         .service-icon svg { width: 28px; height: 28px; }
-
         .service-card h3 {
             font-family: var(--font-display);
             font-size: 20px;
@@ -640,18 +532,14 @@
             margin-bottom: 14px;
             font-weight: 600;
         }
-
         .service-card p {
             font-size: 14px;
             color: var(--text-muted);
             line-height: 1.65;
         }
 
-        /* =========================
-           How It Works
-           ========================= */
+        /* How It Works */
         .how { background: var(--navy-800); }
-
         .how-steps {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -659,12 +547,7 @@
             position: relative;
             margin-top: 20px;
         }
-
-        .how-step {
-            text-align: center;
-            position: relative;
-        }
-
+        .how-step { text-align: center; position: relative; }
         .how-step-circle {
             width: 88px;
             height: 88px;
@@ -679,14 +562,11 @@
             position: relative;
             transition: all 0.3s var(--ease);
         }
-
         .how-step:hover .how-step-circle {
             background: var(--gold);
             color: var(--navy-900);
         }
-
         .how-step-circle svg { width: 32px; height: 32px; }
-
         .how-step-num {
             position: absolute;
             top: -10px;
@@ -704,7 +584,6 @@
             justify-content: center;
             border: 3px solid var(--navy-800);
         }
-
         .how-step h4 {
             font-family: var(--font-display);
             font-size: 17px;
@@ -712,14 +591,12 @@
             margin-bottom: 10px;
             font-weight: 600;
         }
-
         .how-step p {
             font-size: 13px;
             color: var(--text-muted);
             line-height: 1.6;
             padding: 0 8px;
         }
-
         .how-arrow {
             position: absolute;
             top: 44px;
@@ -728,32 +605,23 @@
             opacity: 0.4;
             z-index: 1;
         }
-
         .how-arrow svg { width: 28px; height: 28px; }
 
-        /* =========================
-           FAQs
-           ========================= */
+        /* FAQs */
         .faq-layout {
             display: grid;
             grid-template-columns: 1.4fr 1fr;
             gap: 40px;
             align-items: start;
         }
-
         .faq-list {
             background: var(--navy-800);
             border: 1px solid var(--gold-line);
             border-radius: var(--radius);
             padding: 12px 24px;
         }
-
-        .faq-item {
-            border-bottom: 1px solid var(--navy-600);
-        }
-
+        .faq-item { border-bottom: 1px solid var(--navy-600); }
         .faq-item:last-child { border-bottom: none; }
-
         .faq-question {
             width: 100%;
             background: none;
@@ -770,9 +638,7 @@
             text-align: left;
             transition: color 0.2s var(--ease);
         }
-
         .faq-question:hover { color: var(--gold); }
-
         .faq-chevron {
             width: 18px;
             height: 18px;
@@ -780,15 +646,12 @@
             transition: transform 0.3s var(--ease);
             flex-shrink: 0;
         }
-
         .faq-item.open .faq-chevron { transform: rotate(180deg); }
-
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s var(--ease);
         }
-
         .faq-answer-inner {
             padding: 0 0 22px;
             color: var(--text-muted);
@@ -796,7 +659,6 @@
             line-height: 1.7;
             max-width: 92%;
         }
-
         .faq-cta {
             background: var(--navy-800);
             border: 1px solid var(--gold-line);
@@ -804,7 +666,6 @@
             padding: 44px 32px;
             text-align: center;
         }
-
         .faq-cta-icon {
             width: 56px;
             height: 56px;
@@ -817,9 +678,7 @@
             margin: 0 auto 22px;
             color: var(--gold);
         }
-
         .faq-cta-icon svg { width: 26px; height: 26px; }
-
         .faq-cta h3 {
             font-family: var(--font-display);
             font-size: 22px;
@@ -827,7 +686,6 @@
             margin-bottom: 12px;
             font-weight: 600;
         }
-
         .faq-cta p {
             font-size: 14px;
             color: var(--text-muted);
@@ -835,45 +693,36 @@
             line-height: 1.6;
         }
 
-        /* =========================
-           Contact
-           ========================= */
+        /* Contact */
         .contact { background: var(--navy-800); }
-
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.3fr;
             gap: 60px;
             align-items: start;
         }
-
         .contact-info h2 {
             text-align: left;
             font-size: clamp(26px, 3vw, 34px);
             margin-bottom: 18px;
         }
-
         .contact-info .eyebrow { text-align: left; }
-
         .contact-info > p {
             color: var(--text-muted);
             margin-bottom: 32px;
             font-size: 15px;
             line-height: 1.65;
         }
-
         .contact-items {
             display: flex;
             flex-direction: column;
             gap: 22px;
         }
-
         .contact-item {
             display: flex;
             gap: 16px;
             align-items: flex-start;
         }
-
         .contact-icon {
             width: 44px;
             height: 44px;
@@ -886,9 +735,7 @@
             color: var(--gold);
             flex-shrink: 0;
         }
-
         .contact-icon svg { width: 18px; height: 18px; }
-
         .contact-label {
             font-size: 11px;
             letter-spacing: 0.18em;
@@ -897,13 +744,11 @@
             font-weight: 600;
             margin-bottom: 4px;
         }
-
         .contact-value {
             font-size: 15px;
             color: var(--text);
             line-height: 1.55;
         }
-
         .contact-value a { color: var(--text); transition: color 0.2s var(--ease); }
         .contact-value a:hover { color: var(--gold); }
 
@@ -914,18 +759,13 @@
             border-radius: var(--radius);
             padding: 40px;
         }
-
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
             margin-bottom: 16px;
         }
-
-        .form-field {
-            margin-bottom: 16px;
-        }
-
+        .form-field { margin-bottom: 16px; }
         .form-input,
         .form-select,
         .form-textarea {
@@ -939,17 +779,14 @@
             font-size: 14px;
             transition: border-color 0.2s var(--ease);
         }
-
         .form-input:focus,
         .form-select:focus,
         .form-textarea:focus {
             outline: none;
             border-color: var(--gold);
         }
-
         .form-input::placeholder,
         .form-textarea::placeholder { color: var(--text-dim); }
-
         .form-select {
             appearance: none;
             -webkit-appearance: none;
@@ -958,16 +795,13 @@
             background-position: right 16px center;
             padding-right: 40px;
         }
-
         .form-select:invalid { color: var(--text-dim); }
         .form-select option { color: var(--text); background: var(--navy-800); }
-
         .form-textarea {
             resize: vertical;
             min-height: 110px;
             font-family: inherit;
         }
-
         .form-submit {
             width: 100%;
             padding: 16px;
@@ -975,15 +809,12 @@
             margin-top: 8px;
         }
 
-        /* =========================
-           Footer
-           ========================= */
+        /* Footer */
         .footer {
             background: var(--navy-900);
             padding: 60px 0 30px;
             border-top: 1px solid var(--gold-line);
         }
-
         .footer-top {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -993,14 +824,12 @@
             border-bottom: 1px solid var(--navy-600);
             margin-bottom: 30px;
         }
-
         .footer-contact {
             display: flex;
             flex-wrap: wrap;
             gap: 28px;
             justify-content: flex-end;
         }
-
         .footer-contact-item {
             display: flex;
             align-items: center;
@@ -1008,22 +837,13 @@
             color: var(--text-muted);
             font-size: 13px;
         }
-
         .footer-contact-item svg {
             width: 16px;
             height: 16px;
             color: var(--gold);
         }
-
         .footer-contact-item a { transition: color 0.2s var(--ease); }
         .footer-contact-item a:hover { color: var(--gold); }
-
-        .footer-disclaimer {
-            font-size: 12px;
-            color: var(--text-dim);
-            line-height: 1.65;
-            max-width: 70%;
-        }
 
         .footer-bottom {
             display: flex;
@@ -1032,16 +852,36 @@
             gap: 30px;
             margin-top: 8px;
         }
-
+        .footer-legal { flex: 1; }
+        .footer-disclaimer {
+            font-size: 12px;
+            color: var(--text-dim);
+            line-height: 1.65;
+            margin-bottom: 12px;
+        }
+        .footer-company {
+            font-size: 11px;
+            color: var(--text-dim);
+            line-height: 1.65;
+            margin-bottom: 14px;
+        }
+        .footer-links {
+            font-size: 12px;
+            margin: 0;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            transition: color 0.2s var(--ease);
+        }
+        .footer-links a:hover { color: var(--gold); }
         .footer-copyright {
             font-size: 12px;
             color: var(--text-dim);
             white-space: nowrap;
+            flex-shrink: 0;
         }
 
-        /* =========================
-           Responsive
-           ========================= */
+        /* Responsive */
         @media (max-width: 1024px) {
             .hero-grid,
             .about-grid,
@@ -1049,12 +889,9 @@
                 grid-template-columns: 1fr;
                 gap: 50px;
             }
-
             .hero-visual,
             .about-image { max-width: 480px; margin: 0 auto; }
-
             .services-grid { grid-template-columns: repeat(2, 1fr); }
-
             .how-steps {
                 grid-template-columns: repeat(5, 1fr);
                 gap: 8px;
@@ -1062,12 +899,10 @@
         }
 
         @media (max-width: 860px) {
-            .nav-links,
-            .nav-cta { display: none; }
+            .nav-links { display: none; }
             .hamburger { display: block; }
 
             section { padding: 80px 0; }
-
             .hero { padding: 140px 0 80px; }
 
             .how-steps {
@@ -1088,8 +923,10 @@
                 gap: 28px;
             }
             .footer-contact { justify-content: flex-start; }
-            .footer-disclaimer { max-width: 100%; }
-            .footer-bottom { flex-direction: column; }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 18px;
+            }
         }
 
         @media (max-width: 560px) {
@@ -1102,27 +939,19 @@
             .services-grid.individuals {
                 grid-template-columns: 1fr;
             }
-
             .hero-highlights { grid-template-columns: 1fr; }
-
             .hero-actions { flex-direction: column; }
             .hero-actions .btn { width: 100%; }
-
             .approach-grid { grid-template-columns: repeat(2, 1fr); }
-
             .how-steps { grid-template-columns: 1fr; }
-
             .form-row { grid-template-columns: 1fr; }
-
             .contact-form { padding: 28px 22px; }
-
             .services-label::before,
             .services-label::after { width: 30px; margin: 0 12px; }
-
             .brand-logo { height: 60px; }
             .brand-logo-footer { height: 60px; }
         }
-        
+
         /* Reveal animation on scroll */
         .reveal {
             opacity: 0;
@@ -1157,18 +986,6 @@
                 <li><a href="#contact" data-nav>Contact</a></li>
             </ul>
 
-            <div class="nav-cta">
-                <a href="https://calendly.com/shaaviklegal-info/30min" target="_blank" rel="noopener" class="btn btn-primary">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="2"/>
-                        <line x1="16" y1="2" x2="16" y2="6"/>
-                        <line x1="8" y1="2" x2="8" y2="6"/>
-                        <line x1="3" y1="10" x2="21" y2="10"/>
-                    </svg>
-                    Free 15-Min Discussion
-                </a>
-            </div>
-
             <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                     <line x1="3" y1="7" x2="21" y2="7"/>
@@ -1189,7 +1006,6 @@
             <li><a href="#faqs" data-mobile-nav>FAQs</a></li>
             <li><a href="#contact" data-mobile-nav>Contact</a></li>
         </ul>
-        <a href="https://calendly.com/shaaviklegal-info/30min" target="_blank" rel="noopener" class="btn btn-primary">Free 15-Min Discussion</a>
     </div>
 
     <!-- ============= HERO ============= -->
@@ -1240,7 +1056,7 @@
                             <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/>
                             </svg>
-                            Copyright & Trademark Support
+                            Copyright &amp; Trademark Support
                         </li>
                     </ul>
 
@@ -1354,7 +1170,6 @@
                 </p>
             </div>
 
-            <!-- For Businesses -->
             <div class="services-block reveal">
                 <span class="services-label">For Businesses</span>
                 <div class="services-grid">
@@ -1424,20 +1239,18 @@
                     <article class="service-card">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                                <!-- Certificate / seal of registration — IP & trademark theme -->
                                 <circle cx="12" cy="9" r="6"/>
                                 <path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/>
                                 <path d="M12 6v6"/>
                                 <path d="M9.5 9h5"/>
                             </svg>
                         </div>
-                        <h3>Copyright & Trademark Support</h3>
+                        <h3>Copyright &amp; Trademark Support</h3>
                         <p>Support with copyright registration, trademark searches, UK IPO filing assistance and protecting business brands, creative assets and intellectual property.</p>
                     </article>
                 </div>
             </div>
 
-            <!-- For Individuals -->
             <div class="services-block reveal" style="margin-top: 60px;">
                 <span class="services-label">For Individuals</span>
                 <div class="services-grid individuals">
@@ -1526,8 +1339,8 @@
                             <line x1="3" y1="10" x2="21" y2="10"/>
                         </svg>
                     </div>
-                    <h4>Free 15-Min Discussion</h4>
-                    <p>We have a 15-minute call to discuss your issue and provide initial thoughts and options.</p>
+                    <h4>Initial Discussion</h4>
+                    <p>We arrange an initial discussion to explore your matter and provide initial thoughts and options.</p>
                     <div class="how-arrow">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"/>
@@ -1578,7 +1391,7 @@
                 <div class="divider"></div>
                 <span class="eyebrow">Frequently Asked Questions</span>
                 <h2 class="section-title">Clear answers to common questions</h2>
-                <p class="section-subtitle">If you can&rsquo;t find what you&rsquo;re looking for, get in touch for a free 15-minute discussion.</p>
+                <p class="section-subtitle">If you can&rsquo;t find what you&rsquo;re looking for, please get in touch and we&rsquo;ll be happy to help.</p>
             </div>
 
             <div class="faq-layout reveal">
@@ -1663,7 +1476,7 @@
                         </svg>
                     </div>
                     <h3>Still have a question?</h3>
-                    <p>Get in touch for a free 15-minute discussion. We&rsquo;ll help you understand your position and what to do next.</p>
+                    <p>Get in touch and we&rsquo;ll help you understand your position and what to do next.</p>
                     <a href="https://wa.me/447496027306" target="_blank" rel="noopener" class="btn btn-primary">
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
@@ -1734,7 +1547,7 @@
                             <div>
                                 <div class="contact-label">Location</div>
                                 <div class="contact-value">
-                                    London, 
+                                    London,<br>
                                     United Kingdom
                                 </div>
                             </div>
@@ -1758,7 +1571,7 @@
                 </div>
 
                 <!-- Submit Enquiry Form -->
-                <form class="contact-form reveal" id="enquiryForm" action="https://formspree.io/f/xdaqqego" method="POST" novalidate>
+                <form class="contact-form reveal" id="enquiryForm" action="https://formspree.io/f/mpqypdod" method="POST" novalidate>
                     <div class="form-row">
                         <div>
                             <input type="text" class="form-input" name="name" placeholder="Your Name*" required>
@@ -1778,10 +1591,9 @@
                                 <option>Commercial Contracts</option>
                                 <option>Business Disputes</option>
                                 <option>Payment Recovery</option>
-                                <option>Lease &amp; Tenancy Issues</option>
+                                <option>Commercial Leases &amp; Tenancy Matters</option>
                                 <option>Negotiation Support</option>
-                                <option>Business Legal Support</option>
-                                <option>Intellectual Property Support</option>
+                                <option>Copyright &amp; Trademark Support</option>
                                 <option>Immigration Support</option>
                                 <option>Family &amp; Personal Matters</option>
                                 <option>Other</option>
@@ -1843,26 +1655,24 @@
             </div>
 
             <div class="footer-bottom">
-            <div class="footer-legal">
-                <p class="footer-disclaimer">
-                    Shaavik Legal is a business and legal support consultancy and is not an SRA-regulated law firm. Where a matter requires reserved legal activity or solicitor-led representation, this will be explained and handled through the appropriate regulated route.
-                </p>
-                <p class="footer-company">
-                    Shaavik Legal Ltd is a company registered in England and Wales (Company No. 17317451). Registered Office: 71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom.
-                </p>
+                <div class="footer-legal">
+                    <p class="footer-disclaimer">
+                        Shaavik Legal is a business and legal support consultancy and is not an SRA-regulated law firm. Where a matter requires reserved legal activity or solicitor-led representation, this will be explained and handled through the appropriate regulated route.
+                    </p>
+                    <p class="footer-company">
+                        Shaavik Legal Ltd is a company registered in England and Wales (Company No. 17317451). Registered Office: 71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom.
+                    </p>
                     <p class="footer-links">
                         <a href="/privacy-policy.html">Privacy Policy</a>
-                </p>
+                    </p>
                 </div>
+                <div class="footer-copyright">&copy; 2026 Shaavik Legal Ltd. All rights reserved.</div>
             </div>
-            <div class="footer-copyright">&copy; 2026 Shaavik Legal Ltd. All rights reserved.</div> 
         </div>
     </footer>
 
     <script>
-        // =========================
         // Sticky nav border on scroll
-        // =========================
         const nav = document.getElementById('nav');
         const onScroll = () => {
             if (window.scrollY > 20) nav.classList.add('scrolled');
@@ -1871,9 +1681,7 @@
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
 
-        // =========================
         // Mobile menu toggle
-        // =========================
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -1889,9 +1697,7 @@
             });
         });
 
-        // =========================
         // Active nav link on scroll
-        // =========================
         const sections = ['home', 'about', 'services', 'how', 'faqs', 'contact'];
         const navLinks = document.querySelectorAll('.nav-links a[data-nav]');
 
@@ -1909,16 +1715,13 @@
         window.addEventListener('scroll', setActive, { passive: true });
         setActive();
 
-        // =========================
         // FAQ accordion
-        // =========================
         document.querySelectorAll('.faq-item').forEach(item => {
             const btn = item.querySelector('.faq-question');
             const answer = item.querySelector('.faq-answer');
             btn.addEventListener('click', () => {
                 const isOpen = item.classList.contains('open');
 
-                // Close all
                 document.querySelectorAll('.faq-item').forEach(other => {
                     other.classList.remove('open');
                     other.querySelector('.faq-answer').style.maxHeight = null;
@@ -1933,9 +1736,7 @@
             });
         });
 
-        // =========================
-        // Reveal on scroll (IntersectionObserver)
-        // =========================
+        // Reveal on scroll
         const reveals = document.querySelectorAll('.reveal');
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries) => {
@@ -1952,11 +1753,7 @@
             reveals.forEach(el => el.classList.add('visible'));
         }
 
-        // =========================
         // Form submission → Formspree
-        // Submissions arrive at the email address registered to the Formspree
-        // endpoint configured in the form's `action` attribute.
-        // =========================
         const form = document.getElementById('enquiryForm');
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
