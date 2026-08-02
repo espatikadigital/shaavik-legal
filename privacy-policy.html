@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Shaavik Legal</title>
+    <meta name="description" content="Shaavik Legal's Privacy Policy — how we collect, use and protect your personal data when you visit our website or contact us.">
+    <link rel="canonical" href="https://www.shaaviklegal.co.uk/privacy-policy.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="assets/logo-full.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy-900: #06152D;
+            --navy-800: #0A1D3D;
+            --navy-700: #0F2447;
+            --navy-600: #15305B;
+            --gold: #D4A64A;
+            --gold-soft: #E6BE6A;
+            --gold-line: rgba(212, 166, 74, 0.22);
+            --text: #F2EEE6;
+            --text-muted: #B9BFCC;
+            --text-dim: #8A92A3;
+            --font-display: 'Playfair Display', 'Georgia', serif;
+            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+            --container: 900px;
+            --radius: 12px;
+            --ease: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: var(--navy-900);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: var(--gold); text-decoration: none; transition: color 0.2s var(--ease); }
+        a:hover { color: var(--gold-soft); }
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            margin: 0;
+        }
+        p { margin: 0 0 18px; color: var(--text-muted); }
+        ul { color: var(--text-muted); padding-left: 22px; margin: 0 0 22px; }
+        ul li { margin-bottom: 8px; }
+
+        .container {
+            width: 100%;
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Nav (mini version — logo + back to home) */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(6, 21, 45, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gold-line);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 78px;
+        }
+        .brand { display: flex; align-items: center; }
+        .brand-logo { height: 52px; width: auto; display: block; }
+        .nav-back {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+        .nav-back:hover { color: var(--gold); }
+
+        /* Content */
+        .content {
+            padding: 160px 0 100px;
+        }
+        .content h1 {
+            font-size: clamp(32px, 4vw, 44px);
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .updated {
+            font-size: 13px;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+            letter-spacing: 0.03em;
+        }
+        .content h2 {
+            font-size: clamp(20px, 2.4vw, 24px);
+            color: var(--text);
+            margin: 40px 0 14px;
+            padding-top: 4px;
+        }
+        .content h2:first-of-type { margin-top: 0; }
+
+        .address {
+            background: var(--navy-800);
+            border: 1px solid var(--gold-line);
+            border-radius: var(--radius);
+            padding: 22px 26px;
+            margin: 24px 0;
+            font-size: 15px;
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .address strong { color: var(--gold); font-weight: 600; }
+
+        /* Footer */
+        .footer {
+            background: var(--navy-900);
+            padding: 40px 0 30px;
+            border-top: 1px solid var(--gold-line);
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            text-align: center;
+            line-height: 1.65;
+        }
+        .footer-inner a { color: var(--text-muted); }
+        .footer-inner a:hover { color: var(--gold); }
+        .footer p { color: var(--text-dim); margin: 0 0 10px; }
+
+        @media (max-width: 560px) {
+            .brand-logo { height: 42px; }
+            .content { padding: 120px 0 60px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="brand" aria-label="Shaavik Legal home">
+            <img src="assets/logo-full.png" alt="Shaavik Legal" class="brand-logo">
+        </a>
+        <a href="/" class="nav-back">&larr; Back to Home</a>
+    </div>
+</nav>
+
+<main class="content">
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: 2 August 2026</p>
+
+        <h2>1. Who We Are</h2>
+        <p>Shaavik Legal Ltd ("Shaavik Legal", "we", "our" or "us") is committed to protecting your privacy and handling your personal information responsibly. This Privacy Policy explains how we collect, use and protect your personal data when you visit our website or contact us.</p>
+
+        <div class="address">
+            <strong>Shaavik Legal Ltd</strong><br>
+            Company No. 17317451<br><br>
+            Registered Office:<br>
+            71–75 Shelton Street<br>
+            Covent Garden<br>
+            London WC2H 9JQ<br>
+            United Kingdom<br><br>
+            Email: <a href="mailto:info@shaaviklegal.co.uk">info@shaaviklegal.co.uk</a>
+        </div>
+
+        <h2>2. Information We Collect</h2>
+        <p>We may collect personal information including:</p>
+        <ul>
+            <li>Your name;</li>
+            <li>Email address;</li>
+            <li>Telephone number;</li>
+            <li>Information you include in your enquiry or correspondence;</li>
+            <li>Any documents or information you voluntarily provide in connection with an enquiry.</li>
+        </ul>
+        <p>This information is collected when you complete a contact form, email us, telephone us or otherwise communicate with us.</p>
+        <p>We may also collect limited technical information, such as your IP address, browser type and device information, where necessary for the operation, security and improvement of our website.</p>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>We may use your personal information to:</p>
+        <ul>
+            <li>Respond to your enquiries;</li>
+            <li>Communicate with you regarding our services;</li>
+            <li>Assess whether we can assist with your matter;</li>
+            <li>Provide our consultancy and legal support services;</li>
+            <li>Comply with legal and regulatory obligations;</li>
+            <li>Protect our legitimate business interests;</li>
+            <li>Improve our website and client experience.</li>
+        </ul>
+
+        <h2>4. Lawful Basis for Processing</h2>
+        <p>We process personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+        <p>Depending on the circumstances, we process personal data on one or more of the following lawful bases:</p>
+        <ul>
+            <li>Your consent;</li>
+            <li>Our legitimate interests;</li>
+            <li>The performance of a contract or taking steps before entering into a contract;</li>
+            <li>Compliance with our legal obligations.</li>
+        </ul>
+
+        <h2>5. Sharing Your Information</h2>
+        <p>We do not sell, rent or trade your personal information.</p>
+        <p>Where appropriate, we may share information with:</p>
+        <ul>
+            <li>Professional advisers;</li>
+            <li>External service providers who assist in operating our business;</li>
+            <li>Regulated law firms where your matter requires reserved legal activities or solicitor-led representation;</li>
+            <li>Courts, regulators or government authorities where required by law.</li>
+        </ul>
+        <p>We will only share information where it is lawful and appropriate to do so.</p>
+
+        <h2>6. Data Retention</h2>
+        <p>We retain personal information only for as long as reasonably necessary for the purposes for which it was collected and to comply with applicable legal, regulatory and professional obligations.</p>
+        <p>Where an enquiry does not proceed, information will normally be retained only for an appropriate period unless a longer retention period is required by law.</p>
+
+        <h2>7. Data Security</h2>
+        <p>We take appropriate technical and organisational measures to safeguard personal information against unauthorised access, loss, misuse, alteration or disclosure.</p>
+        <p>We use reasonable technical and organisational measures to protect personal information. However, no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security.</p>
+
+        <h2>8. Your Rights</h2>
+        <p>Subject to applicable law, you may have the right to:</p>
+        <ul>
+            <li>Request access to your personal data;</li>
+            <li>Request correction of inaccurate or incomplete information;</li>
+            <li>Request deletion of your personal data in certain circumstances;</li>
+            <li>Request restriction of processing;</li>
+            <li>Object to the processing of your personal data;</li>
+            <li>Request the transfer of your personal data where applicable.</li>
+        </ul>
+        <p>Requests may be made using the contact details below.</p>
+
+        <h2>9. Contact</h2>
+        <p>If you have any questions regarding this Privacy Policy or the way in which we process your personal information, please contact us:</p>
+        <div class="address">
+            <strong>Shaavik Legal Ltd</strong><br><br>
+            Email: <a href="mailto:info@shaaviklegal.co.uk">info@shaaviklegal.co.uk</a>
+        </div>
+        <p>If you remain dissatisfied, you have the right to lodge a complaint with the Information Commissioner's Office (ICO), the UK's independent authority responsible for data protection: <a href="https://ico.org.uk" target="_blank" rel="noopener">https://ico.org.uk</a></p>
+
+        <h2>10. Changes to this Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in legal requirements, our business operations or our website. Any updates will be published on this page together with the revised <strong>Last updated</strong> date.</p>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <p>Shaavik Legal Ltd is a company registered in England and Wales (Company No. 17317451). Registered Office: 71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom.</p>
+        <p>&copy; 2026 Shaavik Legal Ltd. All rights reserved. &nbsp;·&nbsp; <a href="/">Home</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
